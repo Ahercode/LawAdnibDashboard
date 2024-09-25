@@ -52,34 +52,46 @@ const SidebarLogo = (props: PropsType) => {
     <div className='app-sidebar-logo px-6' id='kt_app_sidebar_logo'>
       <Link to='/dashboard'>
         {config.layoutType === 'dark-sidebar' ? (
+            // <h2 className="text-white-50">
+            //   {companyName}
+            // </h2>
             <h2 className="text-white-50">
-              {companyName}
+              {/*{companyName}*/}
+              Attendance Admin
             </h2>
         ) : (
-          <>
-            <img
-              alt='Logo'
-              src={toAbsoluteUrl('media/logos/default.svg')}
-              className='h-25px app-sidebar-logo-default theme-light-show'
-            />
-            <img
-              alt='Logo'
-              src={toAbsoluteUrl('media/logos/default-dark.svg')}
-              className='h-25px app-sidebar-logo-default theme-dark-show'
-            />
-          </>
+            <>
+              <h2 className="text-white-50">
+                {/*{companyName}*/}
+                Attendance Admin
+              </h2>
+              {/*<img*/}
+              {/*    alt='Logo'*/}
+              {/*    src={toAbsoluteUrl('media/logos/default.svg')}*/}
+              {/*    className='h-25px app-sidebar-logo-default theme-light-show'*/}
+              {/*/>*/}
+              {/*<img*/}
+              {/*    alt='Logo'*/}
+              {/*    src={toAbsoluteUrl('media/logos/default-dark.svg')}*/}
+              {/*    className='h-25px app-sidebar-logo-default theme-dark-show'*/}
+              {/*/>*/}
+            </>
         )}
 
-        <img
-          alt='Logo'
-          src={toAbsoluteUrl('media/logos/default-small.svg')}
-          className='h-20px app-sidebar-logo-minimize'
-        />
+        {/*<h2 className="text-white-50">*/}
+        {/*  /!*{companyName}*!/*/}
+        {/*  Ahercode*/}
+        {/*</h2>*/}
+        {/*<img*/}
+        {/*  alt='Logo'*/}
+        {/*  src={toAbsoluteUrl('media/logos/default-small.svg')}*/}
+        {/*  className='h-20px app-sidebar-logo-minimize'*/}
+        {/*/>*/}
       </Link>
 
       {(appSidebarDefaultMinimizeDesktopEnabled || appSidebarDefaultCollapseDesktopEnabled) && (
-        <div
-          ref={toggleRef}
+          <div
+              ref={toggleRef}
           id='kt_app_sidebar_toggle'
           className={clsx(
             'app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary h-30px w-30px position-absolute top-50 start-100 translate-middle rotate',

@@ -21,6 +21,9 @@ const {BASE_URL} = import.meta.env
 
 const AppRoutes: FC = () => {
   const {currentUser} = useAuth()
+
+    const expiringDate: any = currentUser?.exp
+    const dateObj: any = new Date(expiringDate * 1000);
   return (
     <BrowserRouter basename={BASE_URL}>
       <Routes>
@@ -29,13 +32,13 @@ const AppRoutes: FC = () => {
           <Route path='logout' element={<Logout />} />
           {currentUser ? (
             <>
-              {/*<Route path='/*' element={<PrivateRoutes />} />*/}
-              {/*<Route index element={<Navigate to='/dashboard' />} />*/}
+              <Route path='/*' element={<PrivateRoutes />} />
+              <Route index element={<Navigate to='/dashboard' />} />
             </>
           ) : (
             <>
-                <Route path='/*' element={<PrivateRoutes />} />
-                <Route index element={<Navigate to='/dashboard' />} />
+                {/*<Route path='/*' element={<PrivateRoutes />} />*/}
+                {/*<Route index element={<Navigate to='/dashboard' />} />*/}
               <Route path='auth/*' element={<AuthPage />} />
               <Route path='*' element={<Navigate to='/auth' />} />
             </>

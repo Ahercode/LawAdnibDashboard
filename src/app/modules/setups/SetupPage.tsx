@@ -7,6 +7,8 @@ import {Chapter} from "./components/Chapter.tsx";
 import {Cases} from "./components/Cases.tsx";
 import React from "react";
 import {Contents} from "./components/Contents.tsx";
+import Staff from "./components/Staff.tsx";
+import Attendance from "./components/Attendance.tsx";
 
 const widgetsBreadCrumbs: Array<PageLink> = [
     {
@@ -75,6 +77,25 @@ const SetupPage = () => {
                         <>
                             <PageTitle breadcrumbs={widgetsBreadCrumbs}>App Users</PageTitle>
                             <SageUser />
+                        </>
+                    }
+                />
+
+                <Route
+                    path='staffs'
+                    element={
+                        <>
+                            <PageTitle breadcrumbs={widgetsBreadCrumbs}>All Staffs</PageTitle>
+                            <Staff/>
+                        </>
+                    }
+                />
+                <Route
+                    path='attendance'
+                    element={
+                        <>
+                            <PageTitle breadcrumbs={widgetsBreadCrumbs}>All Attendance</PageTitle>
+                            <Attendance/>
                         </>
                     }
                 />

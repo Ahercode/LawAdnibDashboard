@@ -6,11 +6,8 @@ const SidebarMenuMain = () => {
 
   return (
     <>
-        <SidebarMenuItem to='/setup/app-users' title='Users' fontIcon='bi-layers' icon='element-7' />
-        <SidebarMenuItem to='/setup/cases' title='Cases' fontIcon='bi-layers' icon='element-7' />
-        <SidebarMenuItem to='/setup/chapters' title='Chapters' fontIcon='bi-layers' icon='element-7' />
-        <SidebarMenuItem to='/setup/contents' title='Content' fontIcon='bi-layers' icon='element-7' />
-        <SidebarMenuItem to='/setup/user-devices' title='User Devices' fontIcon='bi-layers' icon='element-7' />
+        <SidebarMenuItem to='/setup/staffs' title='Staffs' fontIcon='bi-layers' icon='element-6' />
+        <SidebarMenuItem to='/setup/attendance' title='Staff Attendance' fontIcon='bi-layers' icon='element-6' />
     </>
   )
 }

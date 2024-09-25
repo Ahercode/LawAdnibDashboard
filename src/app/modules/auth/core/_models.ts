@@ -1,5 +1,5 @@
 export interface AuthModel {
-  api_token: string
+  jwtToken: string
   refreshToken?: string
 }
 
@@ -55,6 +55,7 @@ export interface UserModel {
   companyName?: string
   phone?: string
   roles?: Array<number>
+  exp?: Date
   pic?: string
   language?: 'en' | 'de' | 'es' | 'fr' | 'ja' | 'zh' | 'ru'
   timeZone?: string
